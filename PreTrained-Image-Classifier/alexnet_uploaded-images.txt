@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:        golden_retriever_01.jpg  label:           golden retriever
+ 2 key:       golden_retriever_02.jpeg  label:           golden retriever
+ 3 key:             brazil_flag_01.jpg  label:                brazil flag
+ 4 key:                  jaguar_01.jpg  label:                     jaguar
+
+     MATCH:
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+                 jaguar_01.jpg: 
+Real:                     jaguar   Classifier: jaguar, panther, panthera onca, felis onca
+
+ NOT A MATCH:
+
+      golden_retriever_02.jpeg: 
+Real:           golden retriever   Classifier:                      chihuahua
+
+            brazil_flag_01.jpg: 
+Real:                brazil flag   Classifier:                     wall clock
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 jaguar_01.jpg: 
+Real:                     jaguar   Classifier: jaguar, panther, panthera onca, felis onca  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+      golden_retriever_02.jpeg: 
+Real:           golden retriever   Classifier:                      chihuahua  
+PetLabelDog: 1  ClassLabelDog: 1
+
+            brazil_flag_01.jpg: 
+Real:                brazil flag   Classifier:                     wall clock  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+pct_correct_notdogs: 100.0, n_correct_notdogs: 2, n_notdogs_img: 2
+n_class_cnotd: 2, n_pet_notd: 2, pct_corr_notdog: 100.0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-a Dog Images  :   2
+N Correct Dogs      :   2
+N Correct Breed     :   1
+pct_match           : 50.000000
+pct_correct_dogs    : 100.000000
+pct_correct_breed   : 50.000000
+pct_correct_notdogs : 100.000000
+
+INCORRECT Dog Breed Assignment:
+Real:           golden retriever   Classifier:                      chihuahua
+
+** Total Elapsed Runtime: 0:0:0
